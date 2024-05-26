@@ -74,3 +74,35 @@ models:
         description: "Year of the data."
         tests:
           - not_null
+
+  - name: locations_processed
+    description: "This model processes location data from various sources into a single table."
+    columns:
+      - name: nombre
+        description: "Name of the location."
+        tests:
+          - not_null
+      - name: actividad_tipo
+        description: "Type of activity at the location."
+        tests:
+          - not_null
+      - name: municipio_codigo
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: municipio_nombre
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: longitud
+        description: "Longitude of the location."
+        tests:
+          - not_null
+      - name: latitud
+        description: "Latitude of the location."
+        tests:
+          - not_null
+      - name: year
+        description: "Year for the data."
+        tests:
+          - not_null
