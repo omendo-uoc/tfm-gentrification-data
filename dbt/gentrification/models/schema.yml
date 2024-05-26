@@ -1,0 +1,76 @@
+
+version: 2
+
+models: 
+  - name: demography_processed
+    description: "This model combines demographic data from various sources into a single table."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+          - unique
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: population_total
+        description: "Total population of the municipality."
+        tests:
+          - not_null
+      - name: births
+        description: "Number of births in the municipality."
+        tests:
+          - not_null
+      - name: deaths
+        description: "Number of deaths in the municipality."
+        tests:
+          - not_null
+      - name: foreigns
+        description: "Number of foreign residents in the municipality."
+        tests:
+          - not_null
+      - name: migrations
+        description: "Net migration in the municipality."
+        tests:
+          - not_null
+      - name: mean_age
+        description: "Mean age of residents in the municipality."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
+
+  - name: commerce_processed
+    description: "This model processes commerce data with additional postal code information."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: num_realestate
+        description: "Value of real estate category."
+        tests:
+          - not_null
+      - name: num_hostelry
+        description: "Value of hostelry category."
+        tests:
+          - not_null
+      - name: num_entertainment
+        description: "Value of entertainment category."
+        tests:
+          - not_null
+      - name: num_building
+        description: "Value of building category."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
