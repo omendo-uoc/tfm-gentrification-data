@@ -24,4 +24,4 @@ with engine.connect() as conn:
 
 df.to_sql('municipality_master', engine, if_exists='replace', index=False)
 
-print("---> Data successfully loaded in the table municipality_master ✅")
+print("\n---> Data successfully loaded in the table municipality_master ✅")
