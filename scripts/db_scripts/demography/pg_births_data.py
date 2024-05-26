@@ -35,4 +35,4 @@ with engine.connect() as conn:
 
 df.to_sql('population_births', engine, if_exists='replace', index=False)
 
-print("\n---> Data successfully loaded in the table births ✅")
+print("\n---> Data successfully loaded in the table population_births ✅")
