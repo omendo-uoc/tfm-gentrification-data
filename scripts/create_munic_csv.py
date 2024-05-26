@@ -2,13 +2,13 @@ import pandas as pd
 
 
 def get_cp(filepath):
-    """Function to get CSV file with municipallity cp and name
+    """Function to get CSV file with municipality cp and name
 
     Args:
-        filepath (string): Filepath to extract municipallity cp and name
+        filepath (string): Filepath to extract municipality cp and name
     """
     
-    file_path = '../data/raw/locations/tfm_loc_host_rest.csv'
+    file_path = 'data/raw/locations/tfm_loc_host_rest.csv'
 
     df = pd.read_csv(file_path)
 
@@ -19,10 +19,10 @@ def get_cp(filepath):
 
     print(df_unique_sorted.head())
 
-    output_path = '../data/processed/municipios_tenerife_sorted.csv'
+    output_path = 'data/processed/municipality_master.csv'
     df_unique_sorted.to_csv(output_path, index=False)
 
     print(f"\nFile processed and saved as {output_path}")
     
 
-get_cp('../data/raw/locations/tfm_loc_host_rest.csv')
+get_cp('data/raw/locations/tfm_loc_host_rest.csv')
