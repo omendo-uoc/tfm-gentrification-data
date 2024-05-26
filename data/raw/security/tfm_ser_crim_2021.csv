@@ -1,30 +1,15 @@
-
-Balance de criminalidad. 2021 - 4º Trimestre - Capitales de provincia, municipios mayores de 20.000 habitantes e islas
-Indicadores de seguridad 2021 - 4º Trimestre por geografía, tipología  penal y periodos.
-Unidades: Hechos conocidos
-
-;TOTAL INFRACCIONES PENALES;
-;Enero-diciembre 2021;
--Municipio de Adeje;2881.0;
--Municipio de Arona;3643.0;
--Municipio de Candelaria;583.0;
--Municipio de Granadilla de Abona;2152.0;
--Municipio de Guía de Isora;957.0;
--Municipio de Güímar;474.0;
--Municipio de Icod de los Vinos;336.0;
--Municipio de San Cristóbal de La Laguna;5330.0;
--Municipio de Orotava (La);1263.0;
--Municipio de Puerto de la Cruz;1374.0;
--Municipio de Realejos (Los);829.0;
--Municipio de San Miguel de Abona;1228.0;
--Municipio de Santa Cruz de Tenerife;7312.0;
--Municipio de Tacoronte;584.0;
-Notas:
-NIPO 126-20-005-0          
-           
- (*) Se computan datos provenientes de la Policía Nacional, Guardia  Civil, policías autonómicas y policías locales que proporcionan datos  al Sistema Estadístico de Criminalidad.                       
-                                     
- (**) Indicadores estadísticos de criminalidad utilizados por la  Oficina Estadística Europea (EUROSTAT).          
-    
- (***) Datos pendientes de consolidar
-Fuente: Ministerio del Interior
+MUNICIPIO;VALOR;ANYO
+Adeje;2881.0;2021
+Arona;3643.0;2021
+Candelaria;583.0;2021
+Granadilla de Abona;2152.0;2021
+GuÃ­a de Isora;957.0;2021
+GÃ¼Ã­mar;474.0;2021
+Icod de los Vinos;336.0;2021
+San CristÃ³bal de La Laguna;5330.0;2021
+La Orotava;1263.0;2021
+Puerto de la Cruz;1374.0;2021
+Los Realejos;829.0;2021
+San Miguel de Abona;1228.0;2021
+Santa Cruz de Tenerife;7312.0;2021
+Tacoronte;584.0;2021

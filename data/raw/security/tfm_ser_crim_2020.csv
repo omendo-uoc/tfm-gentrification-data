@@ -1,24 +1,9 @@
-
-Balance de criminalidad. 2020 - 4º Trimestre - Capitales de provincia, municipios mayores de 30.000 habitantes e islas
-Indicadores de seguridad 2020 - 4º Trimestre por geografía, tipología  penal y periodos.
-Unidades: Hechos conocidos
-
-;TOTAL INFRACCIONES PENALES;
-;Enero-diciembre 2020;
-- Municipio de Adeje;3139.0;
-- Municipio de Arona;3748.0;
-- Municipio de Granadilla de Abona;2097.0;
-- Municipio de San Cristóbal de La Laguna;5203.0;
-- Municipio de Orotava (La);1086.0;
-- Municipio de Puerto de la Cruz;1433.0;
-- Municipio de Realejos (Los);788.0;
-- Municipio de Santa Cruz de Tenerife;8232.0;
-Notas:
-NIPO 126-20-005-0       
-        
- (*) Se computan datos provenientes de la Policía Nacional, Guardia  Civil, policías autonómicas y policías locales que proporcionan datos  al Sistema Estadístico de Criminalidad.                    
-                                  
- (**) Indicadores estadísticos de criminalidad utilizados por la  Oficina Estadística Europea (EUROSTAT).  
-   
- (***) Los datos de 2020 son provisionales, están pendientes de  consolidar.
-Fuente: Ministerio del Interior
+MUNICIPIO;VALOR;ANYO
+Adeje;3139.0;2020
+Arona;3748.0;2020
+Granadilla de Abona;2097.0;2020
+San CristÃ³bal de La Laguna;5203.0;2020
+La Orotava;1086.0;2020
+Puerto de la Cruz;1433.0;2020
+Los Realejos;788.0;2020
+Santa Cruz de Tenerife;8232.0;2020
