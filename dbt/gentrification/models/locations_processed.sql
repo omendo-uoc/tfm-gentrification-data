@@ -33,6 +33,6 @@ select
     municipio_nombre,
     longitud,
     latitud,
-    date_part('year', year)::int as year
+    year::date as year
 from date_ranges
 order by nombre desc, municipio_codigo asc
