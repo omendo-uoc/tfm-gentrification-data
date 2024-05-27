@@ -33,6 +33,6 @@ CREATE TABLE IF NOT EXISTS population_foreign (
 with engine.connect() as conn:
     conn.execute(text(create_table_query))
 
-df.to_sql('population_foreing', engine, if_exists='replace', index=False)
+df.to_sql('population_foreign', engine, if_exists='replace', index=False)
 
 print("\n---> Data successfully loaded in the table population_foreign ✅")

@@ -13,7 +13,7 @@ df = df.rename(columns={
     'GEOGRAPHICAL': 'munic_name',
     'MEASURE': 'measure',
     'OBS_VALUE': 'value',
-    'TIME': 'year'
+    'TIME': 'trim_year'
 })
 
 print(df.head())
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS employment_building (
     munic_name VARCHAR(255) NOT NULL,
     measure VARCHAR(255) NOT NULL,
     value FLOAT NOT NULL,
-    year INT NOT NULL
+    trim_year INT NOT NULL
 );
 """
 

@@ -62,9 +62,9 @@ clean_unemployment as (
         munic_name,
         measure,
         value,
-        to_date(substring(trim_year, 1, 4), 'YYYY') as year
+        to_date(substring(month_year, 1, 4), 'YYYY') as year
     from public.unemployment
-    where measure = 'Dato' and trim_year between '2017 Enero' and '2021 Diciembre'
+    where measure = 'Dato' and month_year between '2017 Enero' and '2021 Diciembre'
 ),
 
 combined_employment as (
@@ -111,7 +111,6 @@ combined_personal_income as (
 
 economic_data as (
     select
-        m.munic_cp,
         e.munic_name,
         e.year,
         e.employment_total,
@@ -121,7 +120,8 @@ economic_data as (
         e.employment_services,
         u.unemployment_total,
         i.income_per_household,
-        p.income_per_person
+        p.income_per_person,
+        m.munic_cp
     from combined_employment e
     left join combined_unemployment u on e.munic_name = u.munic_name and e.year = u.year
     left join combined_income i on e.munic_name = i.munic_name and e.year = i.year

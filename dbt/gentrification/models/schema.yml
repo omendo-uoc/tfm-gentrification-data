@@ -2,7 +2,7 @@
 version: 2
 
 models: 
-  - name: demography_processed
+  - name: population_processed
     description: "This model combines demographic data from various sources into a single table."
     columns:
       - name: munic_cp
@@ -131,7 +131,7 @@ models:
         tests:
           - not_null
 
-  - name: economic_processed
+  - name: economy_processed
     description: "This model processes economic data from various sources into a single table."
     columns:
       - name: munic_cp
@@ -222,3 +222,65 @@ models:
         description: "Tourism spending."
         tests:
           - not_null
+
+  - name: gentrification_processed
+    description: "This model combines data from various processed tables into a single table."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data in date format."
+        tests:
+          - not_null
+      - name: population_total
+        description: "Total population."
+      - name: births
+        description: "Number of births."
+      - name: deaths
+        description: "Number of deaths."
+      - name: foreigns
+        description: "Number of foreign residents."
+      - name: migrations
+        description: "Number of migrations."
+      - name: mean_age
+        description: "Mean age of the population."
+      - name: number_realestate
+        description: "Number of real estate establishments."
+      - name: number_hostelry
+        description: "Number of hostelry establishments."
+      - name: number_entertainment
+        description: "Number of entertainment establishments."
+      - name: number_building
+        description: "Number of building establishments."
+      - name: sale_price_m2
+        description: "Sale price per square meter."
+      - name: rent_price_m2
+        description: "Rent price per square meter."
+      - name: employment_total
+        description: "Total employment."
+      - name: employment_building
+        description: "Employment in the building sector."
+      - name: employment_commerce
+        description: "Employment in the commerce sector."
+      - name: employment_hostelry
+        description: "Employment in the hostelry sector."
+      - name: employment_services
+        description: "Employment in the services sector."
+      - name: unemployment_total
+        description: "Total unemployment."
+      - name: income_per_household
+        description: "Income per household."
+      - name: income_per_person
+        description: "Income per person."
+      - name: number_crimes
+        description: "Number of crimes recorded."
+      - name: open_establishments
+        description: "Number of open tourism establishments."
+      - name: tourism_spending
+        description: "Tourism spending."

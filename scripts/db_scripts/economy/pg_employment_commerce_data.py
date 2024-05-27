@@ -13,7 +13,7 @@ df = df.rename(columns={
     'GEOGRAPHICAL': 'munic_name',
     'MEASURE': 'measure',
     'OBS_VALUE': 'value',
-    'TIME': 'year'
+    'TIME': 'trim_year'
 })
 
 print(df.head())

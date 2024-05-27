@@ -43,7 +43,7 @@ with population_data as (
             munic_name,
             to_date(year::text, 'YYYY') as year,
             value as foreigns
-        from public.population_foreing
+        from public.population_foreign
         where measure = 'Dato' and year between 2017 and 2021
     ) f on p.munic_name = f.munic_name and p.year = f.year
     join (
