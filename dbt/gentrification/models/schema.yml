@@ -1,0 +1,286 @@
+
+version: 2
+
+models: 
+  - name: population_processed
+    description: "This model combines demographic data from various sources into a single table."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+          - unique
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: population_total
+        description: "Total population of the municipality."
+        tests:
+          - not_null
+      - name: births
+        description: "Number of births in the municipality."
+        tests:
+          - not_null
+      - name: deaths
+        description: "Number of deaths in the municipality."
+        tests:
+          - not_null
+      - name: foreigns
+        description: "Number of foreign residents in the municipality."
+        tests:
+          - not_null
+      - name: migrations
+        description: "Net migration in the municipality."
+        tests:
+          - not_null
+      - name: mean_age
+        description: "Mean age of residents in the municipality."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
+
+  - name: commerce_processed
+    description: "This model processes commerce data with additional postal code information."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: num_realestate
+        description: "Value of real estate category."
+        tests:
+          - not_null
+      - name: num_hostelry
+        description: "Value of hostelry category."
+        tests:
+          - not_null
+      - name: num_entertainment
+        description: "Value of entertainment category."
+        tests:
+          - not_null
+      - name: num_building
+        description: "Value of building category."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
+
+  - name: locations_processed
+    description: "This model processes location data from various sources into a single table."
+    columns:
+      - name: nombre
+        description: "Name of the location."
+        tests:
+          - not_null
+      - name: actividad_tipo
+        description: "Type of activity at the location."
+        tests:
+          - not_null
+      - name: municipio_codigo
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: municipio_nombre
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: longitud
+        description: "Longitude of the location."
+        tests:
+          - not_null
+      - name: latitud
+        description: "Latitude of the location."
+        tests:
+          - not_null
+      - name: year
+        description: "Year for the data."
+        tests:
+          - not_null
+
+  - name: housing_processed
+    description: "This model processes housing price data with additional postal code information."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: sale_price_m2
+        description: "Sale price per square meter."
+        tests:
+          - not_null
+      - name: rent_price_m2
+        description: "Rent price per square meter."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
+
+  - name: economy_processed
+    description: "This model processes economic data from various sources into a single table."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
+      - name: employment_total
+        description: "Total employment."
+        tests:
+          - not_null
+      - name: employment_building
+        description: "Employment in the building sector."
+        tests:
+          - not_null
+      - name: employment_commerce
+        description: "Employment in the commerce sector."
+        tests:
+          - not_null
+      - name: employment_hostelry
+        description: "Employment in the hostelry sector."
+        tests:
+          - not_null
+      - name: employment_services
+        description: "Employment in the services sector."
+        tests:
+          - not_null
+      - name: unemployment_total
+        description: "Total unemployment."
+        tests:
+          - not_null
+      - name: income_per_household
+        description: "Income per household."
+        tests:
+          - not_null
+      - name: income_per_person
+        description: "Income per person."
+        tests:
+          - not_null
+
+  - name: security_processed
+    description: "This model processes security data and ensures all municipalities are included."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
+      - name: number_crimes
+        description: "Number of crimes recorded."
+        tests:
+          - not_null
+
+  - name: tourism_processed
+    description: "This model processes tourism data and ensures all municipalities are included."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data."
+        tests:
+          - not_null
+      - name: open_establishments
+        description: "Number of open establishments."
+        tests:
+          - not_null
+      - name: tourism_spending
+        description: "Tourism spending."
+        tests:
+          - not_null
+
+  - name: gentrification_processed
+    description: "This model combines data from various processed tables into a single table."
+    columns:
+      - name: munic_cp
+        description: "Postal code of the municipality."
+        tests:
+          - not_null
+      - name: munic_name
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: year
+        description: "Year of the data in date format."
+        tests:
+          - not_null
+      - name: population_total
+        description: "Total population."
+      - name: births
+        description: "Number of births."
+      - name: deaths
+        description: "Number of deaths."
+      - name: foreigns
+        description: "Number of foreign residents."
+      - name: migrations
+        description: "Number of migrations."
+      - name: mean_age
+        description: "Mean age of the population."
+      - name: number_realestate
+        description: "Number of real estate establishments."
+      - name: number_hostelry
+        description: "Number of hostelry establishments."
+      - name: number_entertainment
+        description: "Number of entertainment establishments."
+      - name: number_building
+        description: "Number of building establishments."
+      - name: sale_price_m2
+        description: "Sale price per square meter."
+      - name: rent_price_m2
+        description: "Rent price per square meter."
+      - name: employment_total
+        description: "Total employment."
+      - name: employment_building
+        description: "Employment in the building sector."
+      - name: employment_commerce
+        description: "Employment in the commerce sector."
+      - name: employment_hostelry
+        description: "Employment in the hostelry sector."
+      - name: employment_services
+        description: "Employment in the services sector."
+      - name: unemployment_total
+        description: "Total unemployment."
+      - name: income_per_household
+        description: "Income per household."
+      - name: income_per_person
+        description: "Income per person."
+      - name: number_crimes
+        description: "Number of crimes recorded."
+      - name: open_establishments
+        description: "Number of open tourism establishments."
+      - name: tourism_spending
+        description: "Tourism spending."
